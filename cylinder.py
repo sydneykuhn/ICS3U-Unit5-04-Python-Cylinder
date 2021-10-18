@@ -7,11 +7,12 @@
 
 import math
 
+
 def calculate_volume(radius, height):
     # calculate volume
 
     # process
-    volume = math.pi * (radius**2) * height
+    volume = math.pi * (radius ** 2) * height
 
     # output
     return volume
@@ -27,8 +28,14 @@ def main():
     try:
         radius_from_user = float(radius_as_string)
         height_from_user = float(height_as_string)
-        calculated_volume = round (calculate_volume(radius_from_user, height_from_user), 2)
-        print("\nThe volume of a cylinder with {0} cm radius and {1} cm height is {2} cm³.".format(radius_from_user, height_from_user, calculated_volume))
+        calculated_volume = round(
+            calculate_volume(radius_from_user, height_from_user), 2
+        )
+        print(
+            "\nThe volume of a cylinder with {0} cm radius and {1} cm height is {2} cm³.".format(
+                radius_from_user, height_from_user, calculated_volume
+            )
+        )
     except Exception:
         print("\nInvalid integer entered, please try again.")
 
